@@ -18,15 +18,15 @@ public:
 };
 
 void addNode(Node *root, int val) {
-	if (root->data > val) { //Проверяем размер ключа, если он меньше - влево
-		if (!root->left) { //Если левого древа нет, добавляем в него узел с ключом
+	if (root->data > val) { 
+		if (!root->left) { 
 			root->left = new Node(val);
 		}
 		else {
-			addNode(root->left, val); //В противном случае делаем рекурсию
+			addNode(root->left, val); 
 		}
 	}
-	else { //Если ключ больше медианы
+	else { //Г…Г±Г«ГЁ ГЄГ«ГѕГ· ГЎГ®Г«ГјГёГҐ Г¬ГҐГ¤ГЁГ Г­Г»
 		if (!root->right) {
 			root->right = new Node(val);
 		}
